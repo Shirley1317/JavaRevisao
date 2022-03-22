@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+public class Calculadora {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//ProjetoCalculadora
+		
+		int opcao;
+		int num1=0;
+		int num2=0;
+		
+		while(true) {
+				
+		
+		System.out.println("===DIGITE A OPÇÃO DESEJADA===");
+		System.out.println("1 - Soma");
+		System.out.println("2 - Subtração");
+		System.out.println("3 - Multiplicação");
+		System.out.println("4 - Divisão");
+		System.out.println("5 - Sair");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		opcao = sc.nextInt();
+		
+		if(opcao < 5) {
+		
+		System.out.println("Digite o primeiro número");
+		num1 = sc.nextInt();
+		
+		System.out.println("Digite o segundo número");
+		num2 = sc.nextInt();
+		}
+		
+		
+		switch (opcao) {
+		case 1: 
+			Metodo.soma(num1, num2);
+		break;
+		
+		case 2:
+			Metodo.subtracao(num1, num2);
+			break;
+			
+		case 3:
+			Metodo.multiplicacao(num1, num2);
+			break;	
+		case 4:
+			Metodo.divisao(num1, num2);
+			break;	
+		case 5:
+			System.out.println("Saiu");
+			break;
+			default:
+				System.out.println("Informe opção válida");
+			
+		
+				
+		}
+		
+		if(opcao==5) {
+			
+			break;
+		}
+		
+		}
+		
+	
+
+	}
+
+}
+
+
